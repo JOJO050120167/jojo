@@ -64,6 +64,36 @@
             transform: scale(1.05);
         }
         
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 30px 20px;
+            background: #f8f9fa;
+        }
+        
+        .gallery-item {
+            text-align: center;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item h3 {
+            color: #667eea;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        
         .content {
             padding: 30px 20px;
             background: #f8f9fa;
@@ -79,6 +109,36 @@
             color: #555;
             line-height: 1.6;
             margin-bottom: 15px;
+        }
+        
+        .team-section {
+            padding: 30px 20px;
+            background: #e8eaf6;
+            border-top: 2px solid #667eea;
+        }
+        
+        .team-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .team-member p {
+            color: #555;
+            line-height: 1.6;
         }
         
         .footer {
@@ -107,6 +167,10 @@
             .header p {
                 font-size: 1em;
             }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -118,7 +182,7 @@
         </div>
         
         <div class="image-section">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ybnJ2eoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbW2Nna4uPk5ebn6Onq8vP09fb2+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlbaWmJmaoqOkpaanqKmqsrO0tba2uLm6wsPExcbHyMnK0tPU1dbW2Nna4uPk5ebn6Onq8vP09fb2+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k" alt="Primate mascot - thinking deeply">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMj[...]
         </div>
         
         <div class="content">
@@ -126,6 +190,15 @@
             <p>Welcome to <strong>JOJO</strong> - a repository with personality! This is where ideas take shape and projects come to life.</p>
             <p>Our featured mascot here represents the thoughtful, analytical approach we take to development. Deep thinking leads to better solutions.</p>
             <p><strong>Featured Image:</strong> Contemplative primate - a reminder that all great solutions start with careful consideration!</p>
+        </div>
+        
+        <div class="team-section">
+            <h2>👥 Meet the Team</h2>
+            <div class="team-member">
+                <h3>🌟 JOJO050120167</h3>
+                <p>Welcome! You are now featured on our homepage as a valued member of the JOJO community. Your contributions and presence help make this project special and meaningful.</p>
+                <p>Whether you're collaborating, building, or innovating - your involvement is what drives this repository forward!</p>
+            </div>
         </div>
         
         <div class="footer">
